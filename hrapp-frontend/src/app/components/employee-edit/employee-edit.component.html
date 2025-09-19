@@ -1,0 +1,36 @@
+<h2>Edit Employee</h2>
+
+<form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+  <div class="mb-3">
+    <label class="form-label">First Name</label>
+    <input type="text" class="form-control" [(ngModel)]="employee.firstname" name="firstname" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Last Name</label>
+    <input type="text" class="form-control" [(ngModel)]="employee.lastname" name="lastname" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Title</label>
+    <input type="text" class="form-control" [(ngModel)]="employee.title" name="title" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Division</label>
+    <input type="text" class="form-control" [(ngModel)]="employee.division" name="division" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Building</label>
+    <input type="text" class="form-control" [(ngModel)]="employee.building" name="building">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Room</label>
+    <input type="text" class="form-control" [(ngModel)]="employee.room" name="room">
+  </div>
+
+  <button type="submit" class="btn btn-success me-2" [disabled]="!employeeForm.form.valid">Update</button>
+  <button type="button" class="btn btn-secondary" routerLink="/employees">Cancel</button>
+</form>
